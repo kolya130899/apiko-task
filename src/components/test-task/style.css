@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+}
+.toDoItem {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}

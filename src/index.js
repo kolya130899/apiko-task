@@ -1,15 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-import { PostList } from "./lection2/PostList";
+// import { PostListApp } from "./lection2/PostListApp";
+import { TestTaskApp } from "./components/test-task/TestTaskApp";
 
-const App = () => {
-  let limit = 10;
-  return (
-    <Fragment>
-      <PostList {...{ limit }} />
-    </Fragment>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<TestTaskApp />, document.getElementById("root"));
