@@ -3,7 +3,8 @@ import uuid from "uuid/v4";
 export const TODOS_ACTIONS = {
   ADD: "add",
   COMPLETE: "complete",
-  REMOVE: "remove"
+  REMOVE: "remove",
+  EDIT: "edit"
 };
 
 export const initialState = () => {
@@ -30,6 +31,10 @@ export const todosReducer = (todos, action) => {
       );
     case TODOS_ACTIONS.REMOVE:
       return todos.filter(item => action.id !== item.id);
+    case TODOS_ACTIONS.EDIT:
+      return todos.map(item =>
+        action.newTodo.id === item.id ? action.newTodo : item
+      );
     default:
       throw new Error();
   }

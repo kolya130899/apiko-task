@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-export const ToDoInput = ({ onAdd }) => {
-  const [value, setInputValue] = useState("");
+export const ToDoInput = ({ onAdd, initialValue }) => {
+  const [value, setInputValue] = useState(initialValue);
 
   const onSubmit = event => {
     event.preventDefault();
@@ -18,4 +18,8 @@ export const ToDoInput = ({ onAdd }) => {
       <input {...{ value }} onChange={onChange} />
     </form>
   );
+};
+
+ToDoInput.defaultProps = {
+  initialValue: ""
 };
