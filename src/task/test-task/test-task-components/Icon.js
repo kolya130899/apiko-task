@@ -2,7 +2,7 @@ import React from "react";
 
 import T from "prop-types";
 
-import { iconConfig } from "./iconConfig";
+import { iconConfig } from "../iconConfig";
 
 export const Icon = ({ name, ...props }) => {
   const IconC = iconConfig[name];

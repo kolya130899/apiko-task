@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 
 import { Checkbox } from "./Checkbox";
 import { Icon } from "./Icon";
-import { withCheckedStyles } from "./withCheckedStyles";
+import { withCheckedStyles } from "../withCheckedStyles";
 import { ToDoText } from "./ToDoText";
 
 export const ToDoListItem = withCheckedStyles(

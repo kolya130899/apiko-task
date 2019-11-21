@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from "react";
-import { todosReducer, initialState, TODOS_ACTIONS } from "./todosReduser";
+import { todosReducer, initialState, TODOS_ACTIONS } from "../todosReduser";
 
 export const useTodosHook = () => {
   const [todos, dispatch] = useReducer(todosReducer, initialState());
