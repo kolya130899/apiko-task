@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useToDoInputHook } from "../hooks/useToDoInputHook";
 
 export const ToDoInput = ({ onAdd, initialValue }) => {
@@ -7,9 +7,15 @@ export const ToDoInput = ({ onAdd, initialValue }) => {
     initialValue
   });
 
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   return (
     <form onSubmit={onSubmit}>
-      <input {...{ value }} onChange={onChange} />
+      <input {...{ value }} onChange={onChange} ref={inputRef} />
     </form>
   );
 };

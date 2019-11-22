@@ -9,7 +9,7 @@ export const Checkbox = ({ todo, onSwitch }) => {
   };
 
   useEffect(() => {
-    setChecked(todo.completed);
+    setChecked(todo.completed); //warning is because todo.complete may change during perfomance
   }, []);
 
   return (

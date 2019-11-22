@@ -13,3 +13,7 @@
   align-items: center;
   border-bottom: 1px solid black;
 }
+.filterBtn {
+  margin: 20px 0;
+  padding: 10px 15px;
+}

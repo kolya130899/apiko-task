@@ -25,6 +25,11 @@ export const useTodosHook = () => {
       newTodo,
       type: TODOS_ACTIONS.EDIT
     });
+  // const onFilter = completed =>
+  //   dispatch({
+  //     completed,
+  //     type: TODOS_ACTIONS.FILTER
+  //   });
 
   useEffect(() => {
     const todosStrigified = JSON.stringify(todos);
@@ -37,5 +42,6 @@ export const useTodosHook = () => {
     onEdit,
     onSwitch,
     onRemove
+    // onFilter
   };
 };

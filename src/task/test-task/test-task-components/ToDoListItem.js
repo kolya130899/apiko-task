@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import { Checkbox } from "./Checkbox";
 import { Icon } from "./Icon";
@@ -8,11 +8,11 @@ import { ToDoText } from "./ToDoText";
 export const ToDoListItem = withCheckedStyles(
   ({ todo, onSwitch, onRemove, onEdit, additionalStyles }) => {
     return (
-      <Fragment>
+      <div className="toDoItem">
         <Checkbox {...{ todo, onSwitch }} />
         <ToDoText {...{ todo, additionalStyles, onEdit }} />
         <Icon name="remove" onClick={() => onRemove(todo.id)} />
-      </Fragment>
+      </div>
     );
   }
 );

@@ -5,6 +5,7 @@ export const TODOS_ACTIONS = {
   COMPLETE: "complete",
   REMOVE: "remove",
   EDIT: "edit"
+  // FILTER: "filter"
 };
 
 export const initialState = () => {
@@ -25,16 +26,23 @@ export const todosReducer = (todos, action) => {
           completed: false
         }
       ];
+
     case TODOS_ACTIONS.COMPLETE:
       return todos.map(item =>
         action.id === item.id ? { ...item, completed: !item.completed } : item
       );
+
     case TODOS_ACTIONS.REMOVE:
       return todos.filter(item => action.id !== item.id);
+
     case TODOS_ACTIONS.EDIT:
       return todos.map(item =>
         action.newTodo.id === item.id ? action.newTodo : item
       );
+
+    // case TODOS_ACTIONS.FILTER:
+    //   return action.completed ? appState.filter(todo => !todo.completed) : todos; //remove completed todos from local storage
+
     default:
       throw new Error();
   }
